@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Georgia, serif;
@@ -9,6 +13,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 50px;
   background: black;
   border-bottom: 1px solid gold;
@@ -16,15 +21,22 @@ nav {
 
 nav h2 {
   color: gold;
+  margin: 0;
 }
 
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* HERO SECTION */
+nav ul li {
+  cursor: pointer;
+}
+
+/* HERO */
 .hero {
   height: 90vh;
   background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
@@ -45,6 +57,7 @@ nav ul {
   justify-content: center;
   height: 100%;
   gap: 50px;
+  padding: 20px;
 }
 
 .profile {
@@ -56,6 +69,11 @@ nav ul {
 .hero-text h1 {
   font-size: 40px;
   color: gold;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin: 5px 0;
 }
 
 /* SECTIONS */
@@ -66,6 +84,7 @@ section {
 
 h2 {
   color: gold;
+  margin-bottom: 20px;
 }
 
 /* CARDS */
@@ -80,21 +99,25 @@ h2 {
   border: 1px solid gold;
   background: #111;
   width: 200px;
+  border-radius: 10px;
 }
 
 /* CONTACT */
 input, textarea {
   display: block;
   margin: 10px auto;
-  padding: 10px;
-  width: 250px;
+  padding: 12px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
 }
 
 button {
   background: gold;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /* FOOTER */
@@ -102,4 +125,55 @@ footer {
   background: black;
   padding: 20px;
   border-top: 1px solid gold;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .profile {
+    width: 150px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  input, textarea {
+    width: 90%;
+  }
 }
