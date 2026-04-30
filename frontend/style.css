@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: #0a0a0a;
   color: white;
 }
@@ -9,8 +9,13 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 50px;
   background: black;
+  border-bottom: 1px solid gold;
+}
+
+nav h2 {
+  color: gold;
 }
 
 nav ul {
@@ -19,10 +24,10 @@ nav ul {
   list-style: none;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   height: 90vh;
-  background: url('court.jpg') no-repeat center/cover;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
   position: relative;
 }
 
@@ -30,7 +35,7 @@ nav ul {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: radial-gradient(circle, rgba(255,215,0,0.1), transparent);
 }
 
 .hero-content {
@@ -39,7 +44,7 @@ nav ul {
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 40px;
+  gap: 50px;
 }
 
 .profile {
@@ -48,12 +53,22 @@ nav ul {
   border: 3px solid gold;
 }
 
+.hero-text h1 {
+  font-size: 40px;
+  color: gold;
+}
+
 /* SECTIONS */
 section {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
+h2 {
+  color: gold;
+}
+
+/* CARDS */
 .cards {
   display: flex;
   justify-content: center;
@@ -62,13 +77,29 @@ section {
 
 .card {
   padding: 20px;
-  background: #111;
   border: 1px solid gold;
+  background: #111;
+  width: 200px;
 }
 
-/* BUTTON */
+/* CONTACT */
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+}
+
 button {
   background: gold;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  padding: 20px;
+  border-top: 1px solid gold;
 }
