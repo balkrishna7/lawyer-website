@@ -9,12 +9,10 @@
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   📞 +91 9454098550 | ✉️ adv.ashwani@hotmail.com
 </div>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo-box">
     <img src="images/logo.png">
@@ -29,6 +27,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#news">News</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -52,8 +51,8 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    Advocate Ashwani Tripathi (B.Tech, LL.B) provides expert legal
-    services in civil, criminal and writ matters at Allahabad High Court.
+    Advocate Ashwani Tripathi provides expert legal services in civil,
+    criminal and writ matters.
   </p>
 </section>
 
@@ -62,25 +61,20 @@
   <h2>Our Services</h2>
 
   <div class="services">
-
     <div class="card">
-      <img src="images/civil.jpg">
+      <img src="images/civil.png">
       <h3>Civil Law</h3>
-      <p>Expert legal solutions for civil disputes.</p>
     </div>
 
     <div class="card">
-      <img src="images/criminal.jpg">
+      <img src="images/criminal.png">
       <h3>Criminal Law</h3>
-      <p>Professional criminal defense services.</p>
     </div>
 
     <div class="card">
-      <img src="images/corporate.jpg">
+      <img src="images/corporate.png">
       <h3>Corporate Law</h3>
-      <p>Legal advisory for businesses.</p>
     </div>
-
   </div>
 </section>
 
@@ -90,20 +84,33 @@
   <div id="newsContainer"></div>
 </section>
 
+<!-- BLOG -->
+<section id="blog">
+  <h2>Latest Blog</h2>
+  <div id="blogContainer"></div>
+</section>
+
+<!-- ADD BLOG -->
+<section id="addBlog">
+  <h2>Add Blog</h2>
+
+  <input type="text" id="blogTitle" placeholder="Title">
+  <textarea id="blogContent" placeholder="Content"></textarea>
+
+  <button onclick="addBlog()">Post Blog</button>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-
-  <p><b>Chamber:</b> Chamber No. 56, New Building High Court Allahabad</p>
-  <p><b>Office:</b> C40 Barsana Sector, Kalindipuram, Prayagraj</p>
-
+  <p>Chamber No. 56, High Court Allahabad</p>
+  <p>C40 Barsana, Prayagraj</p>
   <p>📞 +91 9454098550</p>
   <p>✉️ adv.ashwani@hotmail.com</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© Advocate Ashwani Tripathi | All Rights Reserved</p>
+  <p>© Advocate Ashwani Tripathi</p>
 </footer>
 
 <script src="script.js"></script>
