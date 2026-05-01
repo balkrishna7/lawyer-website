@@ -25,9 +25,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 15px 40px;
   background: white;
   color: black;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 40px;
 }
 
 .navbar ul {
@@ -42,7 +52,7 @@ body {
 }
 
 .navbar a:hover {
-  color: gold;
+  color: #c49b63;
 }
 
 /* BUTTON */
@@ -51,13 +61,12 @@ body {
   padding: 10px 20px;
   border-radius: 25px;
   color: white;
-  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   height: 80vh;
-  background: url("court.jpg") center/cover;
+  background: url("images/hero.jpg") center/cover;
   position: relative;
 }
 
@@ -72,6 +81,13 @@ body {
   position: relative;
   text-align: center;
   top: 40%;
+}
+
+.profile {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid gold;
+  margin-bottom: 15px;
 }
 
 /* SECTIONS */
@@ -109,11 +125,27 @@ section {
   transform: translateY(-10px);
 }
 
-/* NEWS */
-#newsContainer div {
-  border: 1px solid gold;
-  margin: 10px;
+/* NEWS FEED */
+.news-card {
+  display: flex;
+  gap: 10px;
+  background: #111;
   padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.news-card img {
+  width: 80px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.news-title {
+  margin: 0;
+  font-size: 14px;
 }
 
 /* FOOTER */
