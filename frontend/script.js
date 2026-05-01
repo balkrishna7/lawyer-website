@@ -1,7 +1,8 @@
+// ================= API BASE =================
 const API = "https://lawyer-website-yske.onrender.com";
 
 
-// ================= NEWS LOAD =================
+// ================= LOAD NEWS =================
 async function loadNews() {
   try {
     const res = await fetch(`${API}/api/news`);
@@ -13,36 +14,41 @@ async function loadNews() {
 
     container.innerHTML = "";
 
-    data.forEach(n => {
+    data.forEach(news => {
       const div = document.createElement("div");
       div.classList.add("news-card");
 
       div.innerHTML = `
-        <h3>${n.title}</h3>
-        <p>${n.content}</p>
+        <h3>${news.title}</h3>
+        <p>${news.content}</p>
       `;
 
       container.appendChild(div);
     });
 
-  } catch (err) {
-    console.log("News error:", err);
+  } catch (error) {
+    console.log("News load error:", error);
   }
 }
 
-loadNews();
-
 
 // ================= CONTACT FORM =================
-const form = document.getElementById("contactForm");
+function setupContactForm() {
+  const form = document.getElementById("contactForm");
 
-if (form) {
+  if (!form) return;
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = document.getElementById("name")?.value;
+    const email = document.getElementById("email")?.value;
+    const message = document.getElementById("message")?.value;
+
+    if (!name || !email || !message) {
+      alert("Please fill all fields");
+      return;
+    }
 
     try {
       await fetch(`${API}/api/contact`, {
@@ -53,46 +59,56 @@ if (form) {
         body: JSON.stringify({ name, email, message })
       });
 
-      alert("Message Sent Successfully ✅");
+      alert("Message sent successfully ✅");
       form.reset();
 
-    } catch (err) {
-      alert("Error sending message ❌");
-      console.log(err);
+    } catch (error) {
+      alert("Failed to send message ❌");
+      console.log(error);
     }
   });
 }
 
 
 // ================= SCROLL ANIMATION =================
-const sections = document.querySelectorAll("section");
+function setupScrollAnimation() {
+  const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-});
-
-sections.forEach(sec => {
-  sec.style.opacity = "0";
-  sec.style.transform = "translateY(40px)";
-  sec.style.transition = "all 0.8s ease";
-
-  observer.observe(sec);
-});
-
-
-// ================= BUTTON SCROLL (OPTIONAL) =================
-const btn = document.querySelector(".btn");
-
-if (btn) {
-  btn.addEventListener("click", () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth"
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
     });
   });
+
+  sections.forEach(sec => {
+    sec.style.opacity = "0";
+    sec.style.transform = "translateY(40px)";
+    sec.style.transition = "all 0.8s ease";
+
+    observer.observe(sec);
+  });
 }
+
+
+// ================= BUTTON SCROLL =================
+function setupButtonScroll() {
+  const btn = document.querySelector(".btn");
+
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    console.log("Button clicked");
+  });
+}
+
+
+// ================= INIT =================
+document.addEventListener("DOMContentLoaded", () => {
+  loadNews();
+  setupContactForm();
+  setupScrollAnimation();
+  setupButtonScroll();
+});

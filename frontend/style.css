@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Georgia;
@@ -5,23 +13,20 @@ body {
   color: white;
 }
 
-/* TOP BAR */
+/* TOPBAR */
 .topbar {
   background: #012b2b;
-  padding: 10px;
   text-align: center;
+  padding: 10px;
 }
 
-/* NAV */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 15px 30px;
   background: white;
-  color: black;
-}
-
-.navbar h2 {
   color: black;
 }
 
@@ -31,12 +36,22 @@ body {
   list-style: none;
 }
 
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a:hover {
+  color: gold;
+}
+
+/* BUTTON */
 .btn {
   background: #c49b63;
-  border: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 25px;
   color: white;
+  text-decoration: none;
 }
 
 /* HERO */
@@ -65,7 +80,7 @@ section {
   text-align: center;
 }
 
-/* CARDS */
+/* SERVICES */
 .services {
   display: flex;
   justify-content: center;
@@ -76,6 +91,8 @@ section {
   background: #111;
   border-radius: 10px;
   overflow: hidden;
+  width: 300px;
+  transition: 0.3s;
 }
 
 .card img {
@@ -88,6 +105,17 @@ section {
   color: gold;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* NEWS */
+#newsContainer div {
+  border: 1px solid gold;
+  margin: 10px;
+  padding: 10px;
+}
+
 /* FOOTER */
 footer {
   background: black;
@@ -96,9 +124,6 @@ footer {
 
 /* MOBILE */
 @media(max-width:768px){
-  .services {
-    flex-direction: column;
-  }
 
   .navbar {
     flex-direction: column;
@@ -106,5 +131,15 @@ footer {
 
   .navbar ul {
     flex-direction: column;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px;
   }
 }
