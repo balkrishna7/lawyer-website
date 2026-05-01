@@ -2,73 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advocate Ashwani Tripathi</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 +91 9454098550 | ✉️ adv.ashwani@hotmail.com
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
   <h2>Ashwani Tripathi</h2>
+
   <ul>
     <li>Home</li>
     <li>About</li>
-    <li>Practice</li>
+    <li>Services</li>
+    <li>News</li>
     <li>Contact</li>
   </ul>
+
+  <button class="btn">Get Appointment</button>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <img src="ashwani.jpg" class="profile" />
-
-    <div>
-      <h1>Advocate Ashwani Tripathi</h1>
-      <p>Practicing at Allahabad High Court</p>
-      <p>B.Tech | LL.B | Civil, Criminal & Writ Practice</p>
-    </div>
+    <h1>Advocates & Legal Consultants</h1>
+    <p>Practicing at Allahabad High Court</p>
   </div>
 </section>
 
-<section class="about">
+<!-- ABOUT -->
+<section>
   <h2>About</h2>
   <p>
-    Advocate Ashwani Tripathi is a practicing lawyer at Allahabad High Court.
-    With a background in B.Tech and LL.B, he brings analytical precision
-    and legal expertise to every case.
+    Advocate Ashwani Tripathi (B.Tech, LL.B) is a practicing lawyer
+    at Allahabad High Court, providing professional legal services
+    in civil, criminal and writ matters.
   </p>
 </section>
 
-<section class="practice">
-  <h2>Practice Areas</h2>
-  <div class="cards">
-    <div class="card">Civil Law</div>
-    <div class="card">Criminal Law</div>
-    <div class="card">Writ Petitions</div>
+<!-- SERVICES -->
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="civil.jpg">
+      <h3>Civil Law</h3>
+      <p>Expert legal solutions for civil disputes.</p>
+    </div>
+
+    <div class="card">
+      <img src="criminal.jpg">
+      <h3>Criminal Law</h3>
+      <p>Professional criminal defense services.</p>
+    </div>
+
+    <div class="card">
+      <img src="corporate.jpg">
+      <h3>Corporate Law</h3>
+      <p>Legal advisory for businesses and compliance.</p>
+    </div>
+
   </div>
 </section>
 
+<!-- NEWS -->
 <section>
-  <h2>Articles</h2>
-  <div id="articles"></div>
+  <h2>Latest Legal News</h2>
+  <div id="newsContainer"></div>
 </section>
 
-<section class="contact">
+<!-- CONTACT -->
+<section>
   <h2>Contact</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Name" required />
-    <input type="email" id="email" placeholder="Email" required />
-    <textarea id="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+
+  <p><b>Chamber:</b> Chamber No. 56, New Building, High Court Allahabad</p>
+  <p><b>Office:</b> C40 Barsana Sector, Kalindipuram, Prayagraj</p>
+
+  <p><b>Mobile:</b> +91 9454098550</p>
+  <p><b>Email:</b> adv.ashwani@hotmail.com</p>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>
-    Disclaimer: As per Bar Council of India rules, this website is only for informational purposes.
-  </p>
+  <p>© Advocate Ashwani Tripathi | All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>
