@@ -1,28 +1,65 @@
-body{margin:0;background:#0a0a0a;color:white;font-family:Georgia;}
-.topbar{text-align:center;padding:10px;background:#012b2b;}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.navbar{display:flex;justify-content:space-between;padding:15px;background:white;color:black;}
-.navbar ul{display:flex;gap:20px;list-style:none;}
-.navbar a{text-decoration:none;color:black;}
+/* BODY FIX */
+body {
+  font-family: Georgia;
+  background: #0a0a0a;
+  color: white;
+  overflow-x: hidden;
+}
 
-.btn{background:#c49b63;padding:10px 20px;border-radius:20px;color:white;}
+/* NAVBAR */
+.navbar {
+  background: black;
+  padding: 15px;
+  text-align: center;
+  color: gold;
+}
 
-.hero{height:80vh;background:url("images/hero.jpg") center/cover;position:relative;}
-.overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
-.hero-content{text-align:center;position:relative;top:50%;transform:translateY(-50%);}
+/* HERO FIX */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #111;
+}
 
-.profile{width:120px;border-radius:50%;border:3px solid gold;}
+.logo {
+  width: 200px;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
 
-section{padding:80px 20px;text-align:center;}
-h2{color:#c49b63;}
+/* SECTIONS */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
 
-.services{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
-.service-card{background:#111;width:300px;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-.service-card img{width:100%;height:200px;object-fit:cover;}
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-.news-card{background:#111;padding:15px;margin:10px auto;max-width:700px;border-radius:10px;}
+.card {
+  background: #111;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
 
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:15px;border-radius:50%;}
-
-.disclaimer{position:fixed;width:100%;height:100%;background:black;display:flex;justify-content:center;align-items:center;}
-.disclaimer-box{background:#111;padding:20px;text-align:center;border-radius:10px;}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
