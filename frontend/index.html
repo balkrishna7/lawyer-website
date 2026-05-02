@@ -1,11 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advocate Ashwani Tripathi</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  📞 +91 9454098550 | ✉️ adv.ashwani@hotmail.com
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <div class="logo-box">
+    <img src="images/logo.png">
+    <div>
+      <h2>Ashwani Tripathi</h2>
+      <p class="tagline">Advocate, High Court</p>
+    </div>
+  </div>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="https://wa.me/919454098550" target="_blank" class="btn">
+    Get Appointment
+  </a>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <img src="images/ashwani.jpg" class="profile">
+
+    <h1>Advocates & Legal Consultants</h1>
+
+    <p class="hero-subtext">
+      Advocate, High Court of Judicature at Allahabad <br>
+      Specializing in Civil, Criminal & Writ Matters
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+
+  <p class="about-text">
+    Advocate Ashwani Tripathi (B.Tech, LL.B) is a dedicated legal professional 
+    practicing at the High Court of Judicature at Allahabad, offering comprehensive 
+    legal services in civil, criminal, and writ matters.
+  </p>
+
+  <p class="about-text">
+    Known for integrity, precision, and client-focused advocacy, he delivers 
+    strategic and result-oriented legal solutions with utmost professionalism.
+  </p>
+</section>
+
+<!-- SERVICES -->
 <section id="services">
   <h2>Our Services</h2>
 
   <div class="services">
 
-    <!-- CIVIL -->
     <div class="service-card">
-      <img src="images/civil.png" alt="Civil Law">
+      <img src="images/civil.png">
 
       <div class="service-content">
         <div class="icon">⚖️</div>
@@ -14,9 +89,8 @@
       </div>
     </div>
 
-    <!-- CRIMINAL -->
     <div class="service-card">
-      <img src="images/criminal.png" alt="Criminal Law">
+      <img src="images/criminal.png">
 
       <div class="service-content">
         <div class="icon">🔗</div>
@@ -25,9 +99,8 @@
       </div>
     </div>
 
-    <!-- CORPORATE -->
     <div class="service-card">
-      <img src="images/corporate.png" alt="Corporate Law">
+      <img src="images/corporate.png">
 
       <div class="service-content">
         <div class="icon">💼</div>
@@ -38,3 +111,52 @@
 
   </div>
 </section>
+
+<!-- NEWS -->
+<section id="news">
+  <h2>Latest Legal News</h2>
+  <div id="newsContainer"></div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <h2>Latest Blog</h2>
+  <div id="blogContainer"></div>
+</section>
+
+<!-- ADD BLOG -->
+<section id="addBlog">
+  <h2>Add Blog (Admin)</h2>
+
+  <input type="text" id="blogTitle" placeholder="Enter Title">
+  <textarea id="blogContent" placeholder="Enter Content"></textarea>
+
+  <button onclick="addBlog()">Post Blog</button>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p><b>Chamber:</b> Chamber No. 56, New Building High Court Allahabad</p>
+  <p><b>Office:</b> C40 Barsana Sector, Kalindipuram, Prayagraj</p>
+
+  <p>📞 +91 9454098550</p>
+  <p>✉️ adv.ashwani@hotmail.com</p>
+
+</section>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919454098550" target="_blank" class="whatsapp">
+  💬
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Advocate Ashwani Tripathi | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

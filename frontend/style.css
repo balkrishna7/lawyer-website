@@ -1,11 +1,113 @@
-/* SERVICES FINAL PREMIUM */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* TOPBAR */
+.topbar {
+  background: #012b2b;
+  text-align: center;
+  padding: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 15px 40px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  background: #c49b63;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  height: 85vh;
+  background: url("images/hero.jpg") center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profile {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid gold;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px;
+  text-align: center;
+}
+
+h2 {
+  color: #c49b63;
+  margin-bottom: 20px;
+}
+
+/* ABOUT */
+.about-text {
+  max-width: 800px;
+  margin: 10px auto;
+  color: #ccc;
+}
+
+/* ================= SERVICES (FINAL FIXED) ================= */
 
 .services {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
 .service-card {
@@ -14,26 +116,21 @@
   overflow: hidden;
   background: #111;
   transition: 0.4s;
-  position: relative;
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* IMAGE FIX */
 .service-card img {
   width: 100%;
   height: 230px;
   object-fit: cover;
-  display: block;
 }
 
-/* CONTENT */
 .service-content {
   padding: 20px;
   text-align: center;
   background: linear-gradient(to bottom, #111, #000);
 }
 
-/* ICON */
 .icon {
   width: 60px;
   height: 60px;
@@ -48,32 +145,73 @@
   border: 3px solid #000;
 }
 
-/* TEXT */
 .service-content h3 {
   color: #c49b63;
   margin-bottom: 10px;
-  font-size: 20px;
 }
 
 .service-content p {
   color: #ccc;
   font-size: 14px;
-  line-height: 1.5;
 }
 
-/* HOVER EFFECT */
-.service-card:hover {
-  transform: translateY(-12px);
+/* ================= NEWS + BLOG ================= */
+
+.news-card {
+  display: flex;
+  gap: 10px;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  max-width: 700px;
+  text-align: left;
 }
 
-/* MOBILE PERFECT */
+/* ================= BLOG FORM ================= */
+
+#addBlog input,
+#addBlog textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
+
+button {
+  background: gold;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
   .services {
     flex-direction: column;
     align-items: center;
   }
 
-  .service-card {
-    width: 90%;
+  .hero {
+    height: auto;
+    padding: 40px;
   }
 }
