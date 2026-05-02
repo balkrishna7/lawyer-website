@@ -3,25 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advocate Ashwani Tripathi</title>
-
+<title>Ashwani Tripathi & Associates</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+<!-- DISCLAIMER -->
+<div id="disclaimer" class="disclaimer">
+  <div class="disclaimer-box">
+    <h3>Disclaimer</h3>
+    <p>
+      As per Bar Council rules, this site is for information only.
+      By continuing, you confirm you are voluntarily seeking information.
+    </p>
+    <button onclick="acceptDisclaimer()">I Agree</button>
+  </div>
+</div>
+
+<!-- TOPBAR -->
 <div class="topbar">
   📞 +91 9454098550 | ✉️ adv.ashwani@hotmail.com
 </div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
-
   <div class="logo-box">
     <img src="images/logo.png">
     <div>
-      <h2>Ashwani Tripathi</h2>
+      <h2>Ashwani Tripathi & Associates</h2>
       <p class="tagline">Advocate, High Court</p>
     </div>
   </div>
@@ -35,24 +45,20 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <a href="https://wa.me/919454098550" target="_blank" class="btn">
-    Get Appointment
-  </a>
-
+  <a href="https://wa.me/919454098550" class="btn">Get Appointment</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="overlay"></div>
-
   <div class="hero-content">
     <img src="images/ashwani.jpg" class="profile">
 
-    <h1>Advocates & Legal Consultants</h1>
+    <h1>Ashwani Tripathi & Associates</h1>
 
     <p class="hero-subtext">
-      Advocate, High Court of Judicature at Allahabad <br>
-      Specializing in Civil, Criminal & Writ Matters
+      Trusted Legal Expertise | Dedicated Representation <br>
+      High Court of Judicature at Allahabad
     </p>
   </div>
 </section>
@@ -60,16 +66,10 @@
 <!-- ABOUT -->
 <section id="about">
   <h2>About</h2>
-
   <p class="about-text">
     Advocate Ashwani Tripathi (B.Tech, LL.B) is a dedicated legal professional 
-    practicing at the High Court of Judicature at Allahabad, offering comprehensive 
-    legal services in civil, criminal, and writ matters.
-  </p>
-
-  <p class="about-text">
-    Known for integrity, precision, and client-focused advocacy, he delivers 
-    strategic and result-oriented legal solutions with utmost professionalism.
+    providing expert services in civil, criminal and writ matters with precision 
+    and client-focused representation.
   </p>
 </section>
 
@@ -81,31 +81,28 @@
 
     <div class="service-card">
       <img src="images/civil.png">
-
       <div class="service-content">
         <div class="icon">⚖️</div>
         <h3>Civil Law</h3>
-        <p>Expert legal solutions for civil disputes and litigation.</p>
+        <p>Dispute resolution & litigation expertise.</p>
       </div>
     </div>
 
     <div class="service-card">
       <img src="images/criminal.png">
-
       <div class="service-content">
         <div class="icon">🔗</div>
         <h3>Criminal Law</h3>
-        <p>Professional criminal defense and bail services.</p>
+        <p>Strong defense & bail representation.</p>
       </div>
     </div>
 
     <div class="service-card">
       <img src="images/corporate.png">
-
       <div class="service-content">
         <div class="icon">💼</div>
         <h3>Corporate Law</h3>
-        <p>Legal advisory for businesses and compliance matters.</p>
+        <p>Business advisory & compliance solutions.</p>
       </div>
     </div>
 
@@ -126,37 +123,45 @@
 
 <!-- ADD BLOG -->
 <section id="addBlog">
-  <h2>Add Blog (Admin)</h2>
+  <h2>Add Blog</h2>
+  <input id="blogTitle" placeholder="Title">
+  <textarea id="blogContent" placeholder="Content"></textarea>
+  <button onclick="addBlog()">Post</button>
+</section>
 
-  <input type="text" id="blogTitle" placeholder="Enter Title">
-  <textarea id="blogContent" placeholder="Enter Content"></textarea>
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <h2>Newsletter</h2>
+  <input placeholder="Enter email">
+  <button>Subscribe</button>
+</section>
 
-  <button onclick="addBlog()">Post Blog</button>
+<!-- IMPORTANT LINKS -->
+<section id="links">
+  <h2>Important Links</h2>
+  <ul>
+    <li><a href="https://indiankanoon.org" target="_blank">Indian Kanoon</a></li>
+    <li><a href="https://devgan.in" target="_blank">Bare Acts</a></li>
+    <li><a href="https://allahabadhighcourt.in" target="_blank">Allahabad High Court</a></li>
+  </ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-
-  <p><b>Chamber:</b> Chamber No. 56, New Building High Court Allahabad</p>
-  <p><b>Office:</b> C40 Barsana Sector, Kalindipuram, Prayagraj</p>
-
+  <p>Chamber No. 56, High Court Allahabad</p>
+  <p>C40 Barsana, Prayagraj</p>
   <p>📞 +91 9454098550</p>
-  <p>✉️ adv.ashwani@hotmail.com</p>
-
 </section>
 
-<!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/919454098550" target="_blank" class="whatsapp">
-  💬
-</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/919454098550" class="whatsapp">💬</a>
 
 <!-- FOOTER -->
 <footer>
-  <p>© Advocate Ashwani Tripathi | All Rights Reserved</p>
+  <p>© Ashwani Tripathi & Associates</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
