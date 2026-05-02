@@ -1,41 +1,39 @@
 const API = "https://lawyer-website-yske.onrender.com";
 
-// NEWS LOAD
-async function loadNews() {
+// NEWS
+async function loadNews(){
   const res = await fetch(`${API}/api/news`);
   const data = await res.json();
 
   const container = document.getElementById("newsContainer");
   container.innerHTML = "";
 
-  data.forEach(n => {
+  data.forEach(n=>{
     container.innerHTML += `
       <div class="news-card">
-        <img src="images/court.jpg">
         <div>
-          <p>${n.title}</p>
-          <span>${n.content}</span>
+          <h4>${n.title}</h4>
+          <p>${n.content}</p>
         </div>
       </div>
     `;
   });
 }
 
-// BLOG LOAD
-async function loadBlog() {
+// BLOG
+async function loadBlog(){
   const res = await fetch(`${API}/api/blog`);
   const data = await res.json();
 
   const container = document.getElementById("blogContainer");
   container.innerHTML = "";
 
-  data.forEach(b => {
+  data.forEach(b=>{
     container.innerHTML += `
       <div class="news-card">
-        <img src="images/court.jpg">
         <div>
-          <p>${b.title}</p>
-          <span>${b.content}</span>
+          <h4>${b.title}</h4>
+          <p>${b.content}</p>
         </div>
       </div>
     `;
@@ -43,25 +41,17 @@ async function loadBlog() {
 }
 
 // ADD BLOG
-async function addBlog() {
+async function addBlog(){
   const title = document.getElementById("blogTitle").value;
   const content = document.getElementById("blogContent").value;
 
-  if (!title || !content) {
-    alert("Fill all fields");
-    return;
-  }
-
-  await fetch(`${API}/api/blog`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ title, content })
+  await fetch(`${API}/api/blog`,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({title,content})
   });
 
-  alert("Blog added ✅");
-
+  alert("Blog Added");
   loadBlog();
 }
 
